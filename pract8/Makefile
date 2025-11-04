@@ -21,6 +21,13 @@ clean:
 
 Implementar un método que permita determinar qué símbolos no terminales son alcanzables desde el símbolo inicial s.
 Esta funcionalidad debe ejecutarse siempre al iniciar el programa, antes de cualquier conversión.
-En clase "ContextFreeGrammar" hay que crear: std::set<char> ReachableNonTerminals() const;
 El programa debe mostrar siempre los símbolos alcanzables desde s al leer la gramática, y advertir si existen no alcanzables.
 
+En clase "ContextFreeGrammar" hay que crear: 
+/**
+     * @brief Devuelve el conjunto de no terminales alcanzables desde s.
+     * Recorre todas las producciones partiendo de s y determina qué símbolos
+     * no terminales pueden alcanzarse transitivamente.
+     * @return Conjunto de símbolos no terminales alcanzables
+     */
+    std::set<char> ReachableNonTerminals() const;
